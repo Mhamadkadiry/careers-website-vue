@@ -9,13 +9,17 @@
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --coverage",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "backend": "json-server --watch db.json --port 3000",
     "format": "prettier --write src/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
-    "vue": "^3.3.10"
+    "axios": "^1.6.3",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
@@ -32,6 +36,7 @@
     "eslint-plugin-vitest-globals": "^1.4.0",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^23.0.1",
+    "json-server": "^0.17.4",
     "postcss": "^8.4.32",
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.1",

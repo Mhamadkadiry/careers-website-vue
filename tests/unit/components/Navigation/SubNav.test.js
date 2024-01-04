@@ -3,38 +3,30 @@ import SubNav from '@/components/Navigation/SubNav.vue'
 import { describe, expect } from 'vitest'
 
 describe('TheSubNav', () => {
-  describe('when user is on jobs page', () => {
-    it('renders the subnav', () => {
-      render(SubNav, {
-        global: {
-          stubs: {
-            FontAwesomeIcon: true
+  const renderSubNav = (routeName) => {
+    render(SubNav, {
+      global: {
+        mocks: {
+          $route: {
+            name: routeName
           }
         },
-        data() {
-          return {
-            onJobResultsPage: true
-          }
+        stubs: {
+          FontAwesomeIcon: true
         }
-      })
+      }
+    })
+  }
+  describe('when user is on jobs page', () => {
+    it('renders the subnav', () => {
+      renderSubNav('JobResults')
       const jobCount = screen.getByText(1653)
       expect(jobCount).toBeInTheDocument()
     })
   })
   describe('when user is not on jobs page', () => {
     it('does not render the subnav', () => {
-      render(SubNav, {
-        global: {
-          stubs: {
-            FontAwesomeIcon: true
-          }
-        },
-        data() {
-          return {
-            onJobResultsPage: false
-          }
-        }
-      })
+      renderSubNav('notJobResults')
       const jobCount = screen.queryByText(1653)
       expect(jobCount).not.toBeInTheDocument()
     })
