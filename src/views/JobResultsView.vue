@@ -5,7 +5,7 @@
     </div>
 </template>
 <script>
-import JobFilterSidebar from '@/components/JobResults/JobFilterSidebar.vue'
+import JobFilterSidebar from '@/components/JobFilterSidebar/JobFilterSidebar.vue'
 import JobListings from '@/components/JobResults/JobListings.vue'
 
 export default {

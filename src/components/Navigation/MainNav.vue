@@ -1,6 +1,6 @@
 <template>
   <header :class="['w-full', 'text-sm', headerHeightClass]">
-    <div class="fixed left-0 top-0 h-16 w-full bg-white">
+    <div class="fixed left-0 top-0 h-16 w-full bg-white font-semibold">
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       menuItems: [
-        { text: "Teams", url: "/" },
+        { text: "Teams", url: "/teams" },
         { text: "Location", url: "/" },
         { text: "Life at Careers", url: "/" },
         { text: "How we hire", url: "/" },
